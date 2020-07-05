@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-app-bar
+      app
+      color="white"
+      height="100"
+      >
+        <v-avatar
+        class="mr-3"
+        color="grey lighten-5"
+        size="70"
+        >
+        <v-img
+          contain
+          height="120%"
+          src="https://logan-ruf.s3-us-west-2.amazonaws.com/static/DFA231A5-B99F-4E79-BA5E-6503C832A7FE_1_201_a.png"
+        ></v-img>
+      </v-avatar>
+      <v-toolbar-title class="font-weight-black headline">
+        Logan Ruf
+      </v-toolbar-title>
+    </v-app-bar>
+    <v-content>
+      <section id="hero">
+        <v-row no-gutters>
+          <v-img
+            :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+            src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+          >
+            <v-theme-provider dark>
+              <v-container fill-height>
+                <v-row
+                  align="center"
+                  class="white--text mx-auto"
+                  justify="center"
+                >
+                  <v-col
+                    class="white--text text-center"
+                    cols="12"
+                    tag="h1"
+                  >
+                    <span
+                    :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
+                      class="font-weight-light"
+                    >
+                     CS STUDENT, PROGRAMMER, COMMUNITCATOR
+                    </span>
+
+                    <br>
+
+                    <span
+                      :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
+                      class="font-weight-black"
+                    >
+                      LOGAN RUF
+                    </span>
+
+                  </v-col>
+
+                  <v-btn
+                    class="align-self-end"
+                    fab
+                    outlined
+                    @click="$vuetify.goTo('#about-me')"
+                  >
+                    <v-icon>mdi-chevron-double-down</v-icon>
+                  </v-btn>
+                </v-row>
+              </v-container>
+            </v-theme-provider>
+          </v-img>
+        </v-row>
+      </section>
+
+      <section id="about-me">
+        <div class="py-12"></div>
+
+        <v-container class="text-center">
+          <h2 class="display-2 font-weight-bold mb-3">ABOUT ME</h2>
+
+          <v-responsive
+            class="mx-auto mb-8"
+            width="56"
+          >
+            <v-divider class="mb-1"></v-divider>
+
+            <v-divider></v-divider>
+          </v-responsive>
+
+          <v-responsive
+            class="mx-auto title font-weight-light mb-8"
+            max-width="720"
+          >
+            I am a programmer, salesman, student, but not a writer. So give me a break here haha! I am an ambitious worker
+            with mental agility and problem solving skills to match. Been a local to CDA all my life. I enjoy the outdoors,
+            hanging out with friends, and learning new things. Fun Fact: I was president of Student Body senior year of highschool.
+          </v-responsive>
+
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
+          >
+            <v-img src="https://logan-ruf.s3-us-west-2.amazonaws.com/static/DFA231A5-B99F-4E79-BA5E-6503C832A7FE_1_201_a.png"></v-img>
+          </v-avatar>
+
+          <div></div>
+
+          <v-btn
+            color="grey"
+            href="https://logan-ruf.s3-us-west-2.amazonaws.com/static/Christopher_Logan_Ruf_Resume.pdf"
+            target="_blank"
+            outlined
+            large
+          >
+            <span class="grey--text text--darken-1 font-weight-bold">
+              PDF RESUME
+            </span>
+          </v-btn>
+        </v-container>
+
+        <div class="py-12"></div>
+      </section>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>
