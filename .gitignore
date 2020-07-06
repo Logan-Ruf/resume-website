@@ -1,6 +1,7 @@
 venv
 .idea
 db.*
-.DS_Store
+*.DS_Store
 *index.html
 secretkey.py
+*__pycache__*
