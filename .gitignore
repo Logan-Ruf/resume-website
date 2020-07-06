@@ -1,0 +1,6 @@
+venv
+.idea
+db.*
+.DS_Store
+*index.html
+secretkey.py
